@@ -1,5 +1,12 @@
 extends layout
 
 block content
-  h1= title
-  p Welcome to #{title}
+	h1= title
+	p Welcome to #[em LocalLibrary]
+
+	ul
+		li Books: !{data.book_count}
+		li Book Instances: !{data.book_instance_count}
+		li Available books: !{data.book_instance_available_count}
+		li Authors: !{data.author_count}
+		li Genres: !{data.genre_count}

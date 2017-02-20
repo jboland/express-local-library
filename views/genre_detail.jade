@@ -1,0 +1,13 @@
+extends layout
+
+block content
+	h1= title
+	h3= genre.name
+
+	ul
+		each book in books
+			li
+				a(href=book.url) #{book.title}
+				div= book.summary
+		else
+			li No books in this genre
